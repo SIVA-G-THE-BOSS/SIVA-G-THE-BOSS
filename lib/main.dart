@@ -73,7 +73,9 @@ class Login extends StatelessWidget {
           duration: const Duration(seconds: 1))
           .animate(AniProp.y, tween: Tween(begin: -1.0, end: 50.0));
 
-    return Scaffold(
+    return  WillPopScope(child:
+
+      Scaffold(
       key: scaffoldkey,
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -334,7 +336,23 @@ class Login extends StatelessWidget {
           ),
         ),
       ),
-    );
+    )  ,onWillPop: () => showDialog<bool>(
+      context: context,
+      builder: (c) => AlertDialog(
+        title: Text('Warning'),
+        content: Text('Do you really want to exit'),
+        actions: [
+          FlatButton(
+            child: Text('Yes'),
+            onPressed: () => Navigator.pop(c, true),
+          ),
+          FlatButton(
+            child: Text('No'),
+            onPressed: () => Navigator.pop(c, false),
+          ),
+        ],
+      ),
+    ));
   }
 
   Future<void> launchFacebook(String fbUrl, String fbWebUrl) async {

@@ -1,5 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:shield/Logo.dart';
 import 'package:shield/Models.dart';
 import 'package:shield/Scanner.dart';
 
@@ -399,8 +400,11 @@ class DrawerScreen extends StatelessWidget {
             Icons.location_city,
             color: Colors.black,
           ),
-          title: Text("Industrial System"),
-          onTap: () {},
+          title: Text("Logo"),
+          onTap: () {
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>Logo()));
+
+          },
         ),
         Divider(
           height: 0.0,
