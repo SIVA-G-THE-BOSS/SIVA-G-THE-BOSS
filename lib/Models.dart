@@ -13,7 +13,8 @@ class Model extends StatefulWidget {
 }
 
 class _ModelState extends State<Model> {
-  @override
+
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
@@ -48,48 +49,76 @@ class CircleImages extends StatefulWidget {
 }
 
 class CircleWidgets extends State<CircleImages> {
+  Container Logos(String imageval,String heading,String subheading) {
+    return Container(
+
+height: 100,
+      width: 160,
+      child: Card(
+        child: Wrap(
+          children: <Widget>[
+            Image.asset(imageval),
+            ListTile(
+              title: Text(heading),
+              subtitle: Text(subheading),
+            )
+
+          ],
+
+
+        ),
+
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
-    List<Widget> widgets = [];
-    for (var x = 0; x < 10; x++) {
-      widgets.add(
-        Container(
-          height: 60.0,
-          width: 60.0,
-          margin: EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                  color: Color.fromARGB(100, 0, 0, 0),
-                  blurRadius: 5.0,
-                  offset: Offset(5.0, 5.0))
-            ],
-            border: Border.all(
-                width: 2.0,
-                style: BorderStyle.solid,
-                color: Color.fromARGB(
-                  255,
-                  0,
-                  0,
-                  0,
-                )),
-            borderRadius: BorderRadius.circular(100),
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/benz.png"),
 
-            ),
+    // List<Widget> widgets = [];
+    // for (var x = 0; x < 10; x++) {
+    //   widgets.add(
+    //     Container(
+    //       height: 60.0,
+    //       width: 60.0,
+    //       margin: EdgeInsets.all(6),
+    //       decoration: BoxDecoration(
+    //         boxShadow: [
+    //           BoxShadow(
+    //               color: Color.fromARGB(100, 0, 0, 0),
+    //               blurRadius: 5.0,
+    //               offset: Offset(5.0, 5.0))
+    //         ],
+    //         border: Border.all(
+    //             width: 2.0,
+    //             style: BorderStyle.solid,
+    //             color: Color.fromARGB(
+    //               255,
+    //               0,
+    //               0,
+    //               0,
+    //             )),
+    //         borderRadius: BorderRadius.circular(100),
+    //         image: DecorationImage(
+    //           fit: BoxFit.cover,
+    //           image: AssetImage("assets/benz.png"),
+    //
+    //         ),
+    //
+    //       ),
+    //     ),
+    //   );
 
-          ),
-        ),
-      );
-    }
     return Container(
     margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 80,
+      height: 180,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: widgets,
+        children: <Widget>[
+          Logos('assets/benz.png',"Benz","Class"),
+          Logos('assets/gtr.png',"gtr","Class"),
+          Logos('assets/bmw.png',"BMW","Class"),
+
+        ],
 
       ),
     );

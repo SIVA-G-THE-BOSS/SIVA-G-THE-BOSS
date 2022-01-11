@@ -102,219 +102,248 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         drawer: DrawerScreen(),
-        body: Stack(children: [
-          Column(
-            children: [
-              Container(
-                height: 350,
-                child: Carousel(
-                  boxFit: BoxFit.cover,
-                  images: [
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading: ImageIcon(
-                                  AssetImage("assets/lambo.png"),
-                                  color: Colors.lightGreenAccent,
-                                ),
-                                title: Text(
-                                  'Lamborghini',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text("Expect the Unexpected")),
-                            Image.asset(
-                              'assets/lambo.png',
-                              height: 200,
-                              width: 200,
+        body: SingleChildScrollView(
+          child: Stack(children: [
+            Column(
+              children: [
+                Container(
+
+                //  color: Colors.lightGreen,
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 300,
+                        child: Carousel(
+                          boxFit: BoxFit.cover,
+                          images: [
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading: ImageIcon(
+                                          AssetImage("assets/lambo.png"),
+                                          color: Colors.lightGreenAccent,
+                                        ),
+                                        title: Text(
+                                          'Lamborghini',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text("Expect the Unexpected")),
+                                    Image.asset(
+                                      'assets/lambo.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
                             ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(mainAxisSize: MainAxisSize.min, children: <
-                          Widget>[
-                        const ListTile(
-                            leading: ImageIcon(AssetImage("assets/benz.png")),
-                            title: Text(
-                              'Mercedes Benz',
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 20),
+                            Card(
+                              child: Column(mainAxisSize: MainAxisSize.min, children: <
+                                  Widget>[
+                                const ListTile(
+                                    leading: ImageIcon(AssetImage("assets/benz.png")),
+                                    title: Text(
+                                      'Mercedes Benz',
+                                      style:
+                                          TextStyle(color: Colors.black, fontSize: 20),
+                                    ),
+                                    subtitle: Text("The Best or Nothing")),
+                                Image.asset(
+                                  'assets/benz.png',
+                                  height: 200,
+                                  width: 200,
+                                ),
+                              ]),
                             ),
-                            subtitle: Text("The Best or Nothing")),
-                        Image.asset(
-                          'assets/benz.png',
-                          height: 200,
-                          width: 200,
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading: ImageIcon(
+                                          AssetImage("assets/ford.png"),
+                                          color: Colors.blueAccent,
+                                        ),
+                                        title: Text(
+                                          'Ford',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle:
+                                            Text(" Don't find fault, find a remedy.")),
+                                    Image.asset(
+                                      'assets/ford.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading: ImageIcon(
+                                          AssetImage(
+                                            'assets/gtr.png',
+                                          ),
+                                          color: Colors.red,
+                                        ),
+                                        title: Text(
+                                          'Nissan',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text("Godzilla")),
+                                    Image.asset(
+                                      'assets/gtr.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading: ImageIcon(
+                                          AssetImage("assets/bmw.png"),
+                                          color: Colors.greenAccent,
+                                        ),
+                                        title: Text(
+                                          'Bayerische Motoren Werke AG',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text("Sheer Driving Pleasure")),
+                                    Image.asset(
+                                      'assets/bmw.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading:
+                                            ImageIcon(AssetImage("assets/audi.png")),
+                                        title: Text(
+                                          'Audi',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text(
+                                            "Challenges are the only way to test yourself in life")),
+                                    Image.asset(
+                                      'assets/audi.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+                            Card(
+                              child: Column(mainAxisSize: MainAxisSize.min, children: <
+                                  Widget>[
+                                const ListTile(
+                                    leading:
+                                        ImageIcon(AssetImage("assets/rollslogo.png")),
+                                    title: Text(
+                                      'Rolls Royce',
+                                      style:
+                                          TextStyle(color: Colors.black, fontSize: 20),
+                                    ),
+                                    subtitle: Text(
+                                        "Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it")),
+                                Image.asset(
+                                  'assets/rollslogo.png',
+                                  height: 200,
+                                  width: 200,
+                                ),
+                              ]),
+                            ),
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading: ImageIcon(
+                                          AssetImage("assets/ferrari.png"),
+                                          color: Colors.yellow,
+                                        ),
+                                        title: Text(
+                                          'Ferrari',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text(
+                                            "You have to have courage to stand up to your critics")),
+                                    Image.asset(
+                                      'assets/ferrari.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+                            Card(
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const ListTile(
+                                        leading:
+                                            ImageIcon(AssetImage("assets/velar.png")),
+                                        title: Text(
+                                          'Range Rover',
+                                          style: TextStyle(
+                                              color: Colors.black, fontSize: 20),
+                                        ),
+                                        subtitle: Text(
+                                            "Above and Beyond. The Go anywhere vehicle. The Power to take you anywhere.")),
+                                    Image.asset(
+                                      'assets/velar.png',
+                                      height: 200,
+                                      width: 200,
+                                    ),
+                                  ]),
+                            ),
+
+
+
+                          ],
                         ),
-                      ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading: ImageIcon(
-                                  AssetImage("assets/ford.png"),
-                                  color: Colors.blueAccent,
-                                ),
-                                title: Text(
-                                  'Ford',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle:
-                                    Text(" Don't find fault, find a remedy.")),
-                            Image.asset(
-                              'assets/ford.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading: ImageIcon(
-                                  AssetImage(
-                                    'assets/gtr.png',
-                                  ),
-                                  color: Colors.red,
-                                ),
-                                title: Text(
-                                  'Nissan',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text("Godzilla")),
-                            Image.asset(
-                              'assets/gtr.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading: ImageIcon(
-                                  AssetImage("assets/bmw.png"),
-                                  color: Colors.greenAccent,
-                                ),
-                                title: Text(
-                                  'Bayerische Motoren Werke AG',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text("Sheer Driving Pleasure")),
-                            Image.asset(
-                              'assets/bmw.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading:
-                                    ImageIcon(AssetImage("assets/audi.png")),
-                                title: Text(
-                                  'Audi',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text(
-                                    "Challenges are the only way to test yourself in life")),
-                            Image.asset(
-                              'assets/audi.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(mainAxisSize: MainAxisSize.min, children: <
-                          Widget>[
-                        const ListTile(
-                            leading:
-                                ImageIcon(AssetImage("assets/rollslogo.png")),
-                            title: Text(
-                              'Rolls Royce',
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 20),
-                            ),
-                            subtitle: Text(
-                                "Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it")),
-                        Image.asset(
-                          'assets/rollslogo.png',
-                          height: 200,
-                          width: 200,
-                        ),
-                      ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading: ImageIcon(
-                                  AssetImage("assets/ferrari.png"),
-                                  color: Colors.yellow,
-                                ),
-                                title: Text(
-                                  'Ferrari',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text(
-                                    "You have to have courage to stand up to your critics")),
-                            Image.asset(
-                              'assets/ferrari.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
-                    Card(
-                      child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            const ListTile(
-                                leading:
-                                    ImageIcon(AssetImage("assets/velar.png")),
-                                title: Text(
-                                  'Range Rover',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 20),
-                                ),
-                                subtitle: Text(
-                                    "Above and Beyond. The Go anywhere vehicle. The Power to take you anywhere.")),
-                            Image.asset(
-                              'assets/velar.png',
-                              height: 200,
-                              width: 200,
-                            ),
-                          ]),
-                    ),
+                      ),
+                      Row(crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Top Models",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                        ],
+                      ),
 
+                      Container(
+                        height:300,
+                      child:
+                      CircleImages(),),
+                      Row(crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Variants",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                      Container(
+                          height: 90,
+                          child: Logo()),
 
-
-                  ],
+                    ],
+                  ),
                 ),
-              ),
 
 
-            ],
-          ),
-        ]),
+              ],
+            ),
+          ]),
+        ),
       ),
     );
   }
@@ -339,7 +368,7 @@ class DrawerScreen extends StatelessWidget {
               ],
             ),
             accountEmail:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text('welcome to Shield !'),
               Align(
                   alignment: Alignment.centerRight,
@@ -375,10 +404,8 @@ class DrawerScreen extends StatelessWidget {
             color: Colors.black,
           ),
           title: Text("Scanner"),
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => ScanQRPage()));
-          },
+          onTap: () =>selectedItem(context, 0)
+
         ),
         SizedBox(height: 1),
         Divider(
@@ -390,7 +417,7 @@ class DrawerScreen extends StatelessWidget {
             color: Colors.black,
           ),
           title: Text("Models"),
-          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Model()));},
+          onTap: ()=>selectedItem(context, 1)
         ),
         Divider(
           height: 0.0,
@@ -401,10 +428,7 @@ class DrawerScreen extends StatelessWidget {
             color: Colors.black,
           ),
           title: Text("Logo"),
-          onTap: () {
-            Navigator.push(context,MaterialPageRoute(builder: (context)=>Logo()));
-
-          },
+          onTap: () =>selectedItem(context, 2)
         ),
         Divider(
           height: 0.0,
@@ -414,8 +438,8 @@ class DrawerScreen extends StatelessWidget {
             Icons.apartment,
             color: Colors.black,
           ),
-          title: Text("Industrial Spares"),
-          onTap: () {},
+          title: Text("Industrial Scanner"),
+          onTap: () => selectedItem(context, 0),
         ),
         Divider(
           height: 0.0,
@@ -510,4 +534,28 @@ class DrawerScreen extends StatelessWidget {
       ]),
     );
   }
+
+  void selectedItem(BuildContext context, int index) {
+    Navigator.pop(context);
+    switch (index) {
+      case 0:
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => ScanQRPage()));
+        break;
+      case 1:
+
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Model()));
+        break;
+      case 2:
+
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Logo()));
+        break;
+
+    }
+
+  }
+
+
 }

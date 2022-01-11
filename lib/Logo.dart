@@ -1,69 +1,74 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Logo extends StatelessWidget {
+class Logo extends StatefulWidget {
 
 
-  Container CircleImages(String imageval,String heading,String subheading){
+  @override
+  State<Logo> createState() => _LogoState();
+}
+
+class _LogoState extends State<Logo> {
+  Container Logos(String imageval){
     return Container(
 
 
-      width: 160,
-      child: Card(
+      height:80,
+        width: 80,
+        margin: EdgeInsets.all(6),
+    decoration: BoxDecoration(
+    boxShadow: [
+    BoxShadow(
+    color: Color.fromARGB(100, 255, 252, 252),
+    blurRadius: 5.0,
+    offset: Offset(5.0, 5.0))
+    ],
+    border: Border.all(
+    width: 2.0,
+    style: BorderStyle.solid,
+   ),
+    borderRadius: BorderRadius.circular(150),),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
         child: Wrap(
           children: <Widget>[
             Image.asset(imageval),
-            ListTile(
-              title: Text(heading),
-              subtitle: Text(subheading),
-            )
+
 
           ],
 
 
         ),
-
       ),
     );
 
 
   }
 
-
-
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(120),
-        child: AppBar(
-            backgroundColor: Colors.black45,
-            actions: [],
-            title: Container(
-              margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 3.0),
-              child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      'assets/mclaren.png',
-                      width: 140,
-                    ),
-                  ]),
-            )),
-      ),
-      body: Container(
-        margin: EdgeInsets.symmetric(vertical: 20.0),
-        height: 300,
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            CircleImages('assets/benz.png',"Benz","Class"),
-            CircleImages('assets/gtr.png',"gtr","Class"),
-            CircleImages('assets/bmw.png',"BMW","Class"),
 
-          ],
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Logos('assets/velar.png',),
 
-        ),
+          Logos('assets/mc.png',),
+          Logos('assets/lambo.png'),
+          Logos('assets/mitsubishi.png',),
+
+          Logos('assets/ford.png'),
+          Logos('assets/hyundai.png',),
+          Logos('assets/honda.png',),
+          Logos('assets/mahindra.png'),
+          Logos('assets/fiat.png'),
+          Logos('assets/ferrari.png',),
+          Logos('assets/benz.png',),
+          Logos('assets/gtr.png',),
+          Logos('assets/bmw.png'),
+
+        ],
+
       ),
 
     );
